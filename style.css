@@ -74,7 +74,7 @@ z-index: 1;
 .navigation ul li a .text
 {
     position: absolute;
-    color: red;
+    color: black;
 font-weight: 400;
 font-size: 0.75em;
 letter-spacing: 0.05em;
@@ -88,48 +88,97 @@ transform: translateY(20px);
 opacity: 1;
 transform: translateY(10px);
 }
-.content
+.home
 {
+    display: flex;
     position:absolute;
     top: 175px;
     left: 15%;
 
 }
-h1{
+.content h1{
     color: #000000;
     margin: 12px 15px 5px;
-    font-size: 35px;
+    font-size: 60px;
     font-family: "sanvito-pro";
 font-weight: 700;
 
 }
-h3{
-    font-size: 25px;
+.content h3{
+    font-size: 36px;
     margin: 8px;
     font-family: "dolce", sans-serif;
 font-weight: 500;
 font-style: normal;
 
 }
-h4{
+.content h4{
     letter-spacing: 2px;
-    font-size: 18px;
+    font-size: 28px;
     font-family: "palomino-sans-one";
 font-weight: 400;
 font-style: normal;
 }
-p{
-    font-size: 10px;
+.content p{
+    font-size: 15px;
     text-align: left;
-    font-family: "kristal";
+    font-family: sans-serif;
 font-style: italic;
+word-spacing: 1px;
 }
 
+.content .btn-box{
+   display: flex;
+   justify-content: space-between;
+    width: 350px;
+    height: 35px;
+    background: #f2f2f2;
+    margin-top: 10px;
 
-.content {
-    height: 500px;
-    width: 400px;
-    border: 1px solid;
-    padding: 100px 50px ;
-    margin: 5px ;
+
+    
+}
+.btn-box a {
+   display: inline-flex;
+   position: relative;
+   justify-content: center;
+   align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+.btn-box a:nth-child(2):hover {
+    color:#f2f2f2;
+}
+    
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:#f2f2f2;
+    z-index: -1;
+    transition: .5s;
+    overflow: hidden;
+}
+.btn-box a:hover::before{
+    width: 100%;
 }
